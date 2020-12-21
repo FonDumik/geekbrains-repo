@@ -1,20 +1,36 @@
-function sum(a, b) {
-  return a + b;
-}
+"use strict";
 
-function diff(a, b) {
-  return a - b;
-}
+const products = [
+  {
+    id: 3,
+    price: 127,
+    photos: ["1.jpg", "2.jpg"],
+  },
+  {
+    id: 5,
+    price: 499,
+    photos: [],
+  },
+  {
+    id: 10,
+    price: 26,
+    photos: ["3.jpg"],
+  },
+  {
+    id: 8,
+    price: 78,
+  },
+];
 
-function divide(a, b) {
-  return a / b;
-}
+/* задание 1 */
+products.forEach((element) => {
+  if (element.photos != undefined && element.photos.length > 0) {
+    console.log(element);
+  }
+});
 
-function multiply(a, b) {
-  return a * b;
-}
-
-console.log(sum(4, 5));
-console.log(diff(4, 5));
-console.log(divide(4, 2));
-console.log(multiply(4, 5));
+/* задание 2 */
+products.sort(function (a, b) {
+  return a.price - b.price;
+});
+console.log(products);
