@@ -103,7 +103,6 @@ function clickHandler(event) {
  * по которой кликнули.
  */
 function showCategory(category) {
-  let markupToProductsDiv = "";
   products[category].forEach((product) => {
     productsBlock.insertAdjacentHTML("beforeend", getProductMarkup(product));
   });
